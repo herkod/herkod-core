@@ -15,10 +15,15 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
 
+            //General
             $table->text('title');
             $table->text('content');
             $table->text('excerp');
             $table->string('slug');
+
+            //Seo
+            $table->string('title_meta')->nullable();
+            $table->string('description_meta')->nullable();
 
             $table->enum('status', [
                 'publish',
@@ -30,6 +35,7 @@ class CreatePostsTable extends Migration
             ])->index();
 
             $table->unsignedInteger('order')->default(0)->index();
+            //attachment, page, post, product, menu, revision
             $table->string('type', 20);
             $table->string('mime_type', 100);
             $table->unsignedInteger('parent_id')->nullable()->index();

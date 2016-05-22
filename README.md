@@ -68,8 +68,12 @@ Deposit::create()
 //Menu
 
 //Order
-Order::list()
-Order::Cancel()
+Order::all()
+Order::cancel()
+Order::create()
+Order::delete()
+Order::paymentOk()
+Order::paymentNo()
 
 //Page
 

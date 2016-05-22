@@ -73,7 +73,11 @@ class HerkodCoreServiceProvider extends ServiceProvider
         |--------------------------------------------------------------------------
         |
         */
-        #$this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
+        $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
+        $this->app->register(\Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class);
+        $this->app->register(\Baum\Providers\BaumServiceProvider::class);
+        $this->app->register(\Intervention\Image\ImageServiceProvider::class);
+        $this->app->register(\Jenssegers\Date\DateServiceProvider::class);
 
         /*
         |--------------------------------------------------------------------------
@@ -113,7 +117,9 @@ class HerkodCoreServiceProvider extends ServiceProvider
         |--------------------------------------------------------------------------
         |
         */
-        #$loader->alias('Cart', Cart\Facade\CartFacade::class);
+        $loader->alias('Debugbar', \Barryvdh\Debugbar\Facade::class);
+        $loader->alias('Image', \Intervention\Image\Facades\Image::class);
+        $loader->alias('Date', \Jenssegers\Date\Date::class);
 
     }
 
