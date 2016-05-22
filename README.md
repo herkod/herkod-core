@@ -7,7 +7,7 @@ Laravel paketi halinde, Türkiye şartları için hazırlanmış bir e-ticaret �
 
 Şu anda içinde bulunduğunuz proje e-ticaret çözümünün çekirdek işlemleri için geliştirilmektedir.
 
-##### Örnek Çekirdek Methodları;
+##### Planlanan Örnek Methodlar;
 
 ```php
 User::create()
@@ -38,13 +38,26 @@ Neden Laravel paketi olarak geliştiriliyor; Laravel'in php frameworkler arasın
 
 Projede geliştirilme dili olarak Türkçe seçilmesinin temel nedeni, yabancı dil noktasında sıkıntı yaşayan Türk yazılımcıların tecrübelerini bizimle paylaşmaktan çekinmemelerini sağlamak ve Github gibi bir platforma alışmalarını kolaylaştırmaktır. Ayrıca Github üzerindeki Türk geliştirici sayısını arttırıp varolanları daha aktif hale getirebilme düşünceside Türkçe noktasında bizi etkilemiştir. Bu doğrultuda Github'ın kullanımı ile ilgili Türkçe dökümanlarda hazırlanacaktır. Ayrıca Laravel çatısı kullanılarak hazırlanmış, Türkçe olarak geliştirilmiş bir proje örneği kazandırmış olacağız.
 
+İsimlendirme neden Herkod-Core; Herkod, [Herkod Yazılım][herkod]'ın tescilli markasıdır. O yüzden isim aramak yerine şimdilik bu şekilde isimlendirilmiştir. İsmin değişmesi ile ilgili herhangi bir kısıtlama yoktur ve günü geldiğinde projenin geneli için isim değişikliği yapılabilir.
+
+Ödeme sistemleri olarak öncelikle Payu ve Iyzico ile entegrasyon yapılacaktır.
+
 #### Yazılım Geliştirme Tercihleri
+
+Yazılan kodun mümkün olduğunca test edilebilir olması birincil hedeflerimizdendir.
+
+Pakette bir modülü geliştirmeden önce testlerini yazarak daha sonra paketi geliştirmeye başlamayı hedefliyoruz. Yani öncelikli amaç testlerin yazılmasıdır. Projeye katkı sağlamak isteyenlerden de öncelikle geliştirmek istedikleri modül için veya düzelmek istedikleri hata için yazılabiliyorsa testini bekleyeceğiz.
 
 Core paketinin klasör yapısını inceleyerek nasıl bir klasör yapısı tercih ettiğimizi direk anlayabilirsiniz.
 
 Bu paket şu anda Laravel'in LTS sürümü olan 5.1.* versiyonu için geliştirilmektedir. Bir sonraki LTS versiyonu yayınlandığında o versiyona upgrade edilecektir.
 
 Php standartları açısından PSR standartları göz önünde bulundurulmaktadır. Standartlara uygunluk için [php-cs-fixer][php-cs-fixer] kullanılmaktadır.
+
+Çoğu e-ticaret çözümünde olduğu gibi, gerçekleştirilen işlemlerde gerekli görülenler için hooks|events geliştirilerek geliştirilebilir bir yapı hedeflenmektedir.
+
+#### Projeye Nasıl Katkı Sağlayabilirsiniz
+Bu bölümde projenin geliştirme aşamasında nasıl kullanılabilir ve geliştirilebilir hale getirilebileceğiniz anlatacağız.
 
 
 #### İletişim
@@ -54,3 +67,4 @@ Bizimle iletişime geçmek için **github@herkod.com** mail adresine mail atabil
 
 
 [php-cs-fixer]:http://cs.sensiolabs.org/
+[herkod]:https://www.herkod.com/
