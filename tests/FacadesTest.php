@@ -13,6 +13,7 @@ class FacadesTest extends TestCase
             'Category',
             'Comment',
             'Currency',
+            'Data',
             'Deposit',
             'Invoice',
             'Mailer',
