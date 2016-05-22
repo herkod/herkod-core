@@ -1,0 +1,13 @@
+{
+    "name": "herkod/herkod-core",
+    "description": "Laravel için e-ticaret çözümü.",
+    "keywords": ["ecommerce", "e-ticaret", "türkiye"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    }
+}
