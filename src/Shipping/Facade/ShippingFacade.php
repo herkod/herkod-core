@@ -1,10 +1,10 @@
 <?php
 
-namespace Herkod\Core\Shipper\Facade;
+namespace Herkod\Core\Shipping\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
-class ShipperFacade extends Facade
+class ShippingFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -13,6 +13,6 @@ class ShipperFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return '\Herkod\Core\Shipper\Shipper';
+        return '\Herkod\Core\Shipping\Shipping';
     }
 }

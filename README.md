@@ -10,16 +10,65 @@ Laravel paketi halinde, Türkiye şartları için hazırlanmış bir e-ticaret �
 ##### Planlanan Örnek Methodlar;
 
 ```php
-User::create()
-Product::create()
-Product::list()->filterBy()
+
+//Cart
+Cart::add($product_id, 1)
+
+//Category
+
+//Comment
+
+//Currency
 Currency::create()
-Post::create()
+
+//Data
+
+//Deposit
+
+//Invoice
+
+//Mailer
+
+//Media
+
+//Menu
+
+//Order
 Order::list()
 Order::Cancel()
-Subscriber::filterBy()->sendEmail()
+
+//Page
+
+//Parameter
+
+//Payment
+
+//Post
+Post::create()
+
+//Product
+Product::create()
+Product::list()->filterBy()
+
+//Promotion
+
+//Shipping
+
+//Stock
 Stock::depleted()
-Cart::add($product_id, 1)
+
+//Subscriber
+Subscriber::filterBy()->sendEmail()
+
+//Tag
+
+//Tax
+
+//Users
+Users::create()
+
+//Utils
+
 ```
 
 #### Genel Bilgilendirme
@@ -55,6 +104,10 @@ Bu paket şu anda Laravel'in LTS sürümü olan 5.1.* versiyonu için geliştiri
 Php standartları açısından PSR standartları göz önünde bulundurulmaktadır. Standartlara uygunluk için [php-cs-fixer][php-cs-fixer] kullanılmaktadır.
 
 Çoğu e-ticaret çözümünde olduğu gibi, gerçekleştirilen işlemlerde gerekli görülenler için hooks|events geliştirilerek geliştirilebilir bir yapı hedeflenmektedir.
+
+Tam anlamıyla kararlı sürümü yayınlanmadan Packagist üzerinden composer ile kurulum mümkün olmayacaktır. Github reposu üzerinden nasıl kurulum yapabileceğinizi "Projeye Nasıl Katkı Sağlayabilirsiniz" bölümünden öğrenebilirsiniz.
+
+Bağımlılıklar proje tam anlamıyla pakete dönüştürülene kadar Laravel projenizin composer.json dosyası ile yönetilecektir. Alternatif bir yol için tavsiyelerinize açığız.
 
 #### Projeye Nasıl Katkı Sağlayabilirsiniz
 Bu bölümde projenin geliştirme aşamasında nasıl kullanılabilir ve geliştirilebilir hale getirilebileceğiniz anlatacağız.

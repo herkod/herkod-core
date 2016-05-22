@@ -99,7 +99,7 @@ class HerkodCoreServiceProvider extends ServiceProvider
         $loader->alias('Post', Post\Facade\PostFacade::class);
         $loader->alias('Product', Product\Facade\ProductFacade::class);
         $loader->alias('Promotion', Promotion\Facade\PromotionFacade::class);
-        $loader->alias('Shipper', Shipper\Facade\ShipperFacade::class);
+        $loader->alias('Shipping', Shipping\Facade\ShippingFacade::class);
         $loader->alias('Stock', Stock\Facade\StockFacade::class);
         $loader->alias('Subscriber', Subscriber\Facade\SubscriberFacade::class);
         $loader->alias('Tag', Tag\Facade\TagFacade::class);

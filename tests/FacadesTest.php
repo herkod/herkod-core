@@ -26,7 +26,7 @@ class FacadesTest extends TestCase
             'Post',
             'Product',
             'Promotion',
-            'Shipper',
+            'Shipping',
             'Stock',
             'Subscriber',
             'Tag',
