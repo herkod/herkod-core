@@ -12,18 +12,52 @@ Laravel paketi halinde, Türkiye şartları için hazırlanmış bir e-ticaret �
 ```php
 
 //Cart
-Cart::add($product_id, 1)
+Cart::addToCart()
+Cart::delete()
+Cart::contentsCount()
+Cart::contentsWeight()
+Cart::isEmpty()
+Cart::products()
+Cart::productAttribute()
 
 //Category
+Category::roots()
+Category::addRoot()
+Category::addChild()
+Category::makeChildOf()
+Category::moveUp()
+Category::moveDown()
+Category::isChild()
+Category::isRoot()
+Category::getItem()
 
 //Comment
+Comment::get()
+Comment::create()
+Comment::update()
+Comment::apply()
+Comment::delete()
+Comment::all()
+Comment::postComments()
+Comment::gravatar()
 
 //Currency
 Currency::create()
+Currency::delete()
+Currency::update()
+Currency::get()
+Currency::all()
+Currency::calculate()
 
 //Data
+Data::type('page')->filter('id', 1)
+Data::type('product')->filter('category', 'computer')
 
 //Deposit
+Deposit::all()
+Deposit::tolal()
+Deposit::spending()->filter()
+Deposit::create()
 
 //Invoice
 
@@ -56,6 +90,8 @@ Product::list()->filterBy()
 
 //Stock
 Stock::depleted()
+Deposit::inStock()
+Deposit::all()
 
 //Subscriber
 Subscriber::filterBy()->sendEmail()
@@ -108,6 +144,13 @@ Php standartları açısından PSR standartları göz önünde bulundurulmaktad�
 Tam anlamıyla kararlı sürümü yayınlanmadan Packagist üzerinden composer ile kurulum mümkün olmayacaktır. Github reposu üzerinden nasıl kurulum yapabileceğinizi "Projeye Nasıl Katkı Sağlayabilirsiniz" bölümünden öğrenebilirsiniz.
 
 Bağımlılıklar proje tam anlamıyla pakete dönüştürülene kadar Laravel projenizin composer.json dosyası ile yönetilecektir. Alternatif bir yol için tavsiyelerinize açığız.
+
+**Bağımlılığı öngörülen paketler;**
+- barryvdh/laravel-debugbar
+- etrepat/baum
+- briannesbitt/Carbon
+- jenssegers/date
+- intervention/image
 
 #### Projeye Nasıl Katkı Sağlayabilirsiniz
 Bu bölümde projenin geliştirme aşamasında nasıl kullanılabilir ve geliştirilebilir hale getirilebileceğiniz anlatacağız.
