@@ -1,6 +1,6 @@
 <?php
 
-namespace Herkod\Core\Libraries;
+namespace Herkod\Core\Utils\Model;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon;
@@ -25,7 +25,7 @@ class Model extends Model
                 $table->updated_by = Auth::user()->name;
                 $table->updated_by_id = Auth::user()->id;
             } else {
-                $table->updated_by = 'Herkod';
+                $table->updated_by = 'herkod-core';
             }
         });
 
@@ -37,8 +37,8 @@ class Model extends Model
                 $table->created_by_id = Auth::user()->id;
                 $table->updated_by_id = Auth::user()->id;
             } else {
-                $table->created_by = 'Herkod';
-                $table->updated_by = 'Herkod';
+                $table->created_by = 'herkod-core';
+                $table->updated_by = 'herkod-core';
             }
         });
     }

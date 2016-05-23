@@ -9,11 +9,11 @@ class FacadesTest extends TestCase
         parent::setUp();
 
         $this->facades = [
+            'Blog',
             'Cart',
             'Category',
             'Comment',
             'Currency',
-            'Data',
             'Deposit',
             'Invoice',
             'Mailer',
@@ -46,6 +46,4 @@ class FacadesTest extends TestCase
             $this->assertTrue(class_exists('\\Herkod\\Core\\'.$facade.'\\'.$facade), '\\Herkod\\Core\\'.$facade.'\\'.$facade.' classını kontrol etmelisin.');
         }
     }
-
-
 }

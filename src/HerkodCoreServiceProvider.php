@@ -86,11 +86,11 @@ class HerkodCoreServiceProvider extends ServiceProvider
         |
         */
         $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+        $loader->alias('Blog', Currency\Facade\CurrencyFacade::class);
         $loader->alias('Cart', Cart\Facade\CartFacade::class);
         $loader->alias('Category', Category\Facade\CategoryFacade::class);
         $loader->alias('Comment', Comment\Facade\CommentFacade::class);
         $loader->alias('Currency', Currency\Facade\CurrencyFacade::class);
-        $loader->alias('Data', Currency\Facade\CurrencyFacade::class);
         $loader->alias('Deposit', Deposit\Facade\DepositFacade::class);
         $loader->alias('Invoice', Invoice\Facade\InvoiceFacade::class);
         $loader->alias('Mailer', Mailer\Facade\MailerFacade::class);

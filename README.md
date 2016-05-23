@@ -83,17 +83,31 @@ Order::deleteInvoice()
 //Parameter
 
 //Payment
+Payment::methods()
 
 //Post
 Post::create()
+Post::update()
+Post::type()
 
 //Product
 Product::create()
 Product::list()->filterBy()
+Product::getAttribute()
+Product::setAttribute()
+Product::allAttributes()
+Product::allSpecifications()
+Product::getSpecification()
+Product::setSpecification()
+Product::variations()
 
 //Promotion
+Promotion::create()
+Promotion::createForFreeShipping()
 
 //Shipping
+Shipping::create()
+Shipping::listAsOption()
 
 //Stock
 Stock::depleted()
@@ -104,17 +118,28 @@ Deposit::all()
 Subscriber::filterBy()->sendEmail()
 
 //Tag
+Tag::create()
+Tag::posts()
 
 //Tax
+Tax::create()
+Tax::update()
+Tax::calculate()
+Tax::withTax()
+Tax::withoutTax()
 
 //Users
 Users::create()
+Users::login()
+Users::setRole()
+Users::getRoles()
+Users::suspend()
 
 //Utils
-Utils::importData()
-Utils::exportData()
-Utils::backupDb()
-
+Utils::dbToExcel()
+Utils::excelToDb()
+Utils::backupDbExport()
+Utils::backupDbImport()
 ```
 
 #### Genel Bilgilendirme

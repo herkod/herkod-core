@@ -1,10 +1,10 @@
 <?php
 
-namespace Herkod\Core\Data\Facade;
+namespace Herkod\Core\Blog\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
-class DataFacade extends Facade
+class BlogFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -13,6 +13,6 @@ class DataFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return '\Herkod\Core\Data\Data';
+        return '\Herkod\Core\Blog\Blog';
     }
 }
