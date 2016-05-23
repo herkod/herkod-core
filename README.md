@@ -3,7 +3,7 @@ Not: Bu paket hala geliştirilme aşamasındadır.
 
 ### Herkod E-ticaret Çözümü
 
-Laravel paketi halinde, Türkiye şartları için hazırlanmış bir e-ticaret çözümüdür. Tamamen Türkçe olarak, Türk ödeme sistemleri, Türk kargo firmaları ve Türkiyede ki ticaret şartları göz önünde bulundurularak hazırlanmaktadır. Stok yönetimi, Fatura, Kasa gibi e-ticaret modülü için ekstra olan, ön muhasebe modülleride geliştirilmektedir. Sadece ön muhasebe amaçlıda kullanılabilir.
+Laravel paketi halinde, Türkiye şartları için hazırlanmış bir e-ticaret çözümüdür. Tamamen Türkçe olarak, Türk ödeme sistemleri, Türk kargo firmaları ve Türkiye'de ki ticaret şartları göz önünde bulundurularak hazırlanmaktadır. Stok yönetimi, Fatura, Kasa gibi e-ticaret modülü için ekstra olan, ön muhasebe modülleri de geliştirilmektedir. Sadece ön muhasebe amaçlıda kullanılabilir.
 
 Şu anda içinde bulunduğunuz proje e-ticaret çözümünün çekirdek işlemleri için geliştirilmektedir.
 
@@ -157,8 +157,24 @@ Bağımlılıklar proje tam anlamıyla pakete dönüştürülene kadar Laravel p
 - intervention/image
 
 #### Projeye Nasıl Katkı Sağlayabilirsiniz
-Bu bölümde projenin geliştirme aşamasında nasıl kullanılabilir ve geliştirilebilir hale getirilebileceğiniz anlatacağız.
+Öncelikle projeden fork ile çatal oluşturmalısınız. Sonrasında oluşturduğunuz çataldan projeyi klonlamalı yada manuel olarak indirmelisiniz.
+Forkunuzdan Projeyi `vendor/herkod/herkod-core` klasörüne klonlamalı yada manuel olarak indirerek bu klasöre çıkartmalısınız.
+Sonrasında yapmak istediğiniz güncellemeleri yaparak sırasıyla;
+'git add .'
+'git commit -m "Projede xxx değişikliği yapıldı."'
+'git push origin master'
+komutlarını çalıştırıyoruz. Bu komutlar sonrasında projeden oluşturduğunuz çatala göz atabilirsiniz. Yaptığınız commitler görünecektir. Bu işlemlerden sonra `Create Pull Request` göndererek işlemi tamamlayabilirsiniz. Katkılarınız en kısa sürede incelenecek ve dönüş yapılacaktır.
 
+İndirdiğiniz paketin laravel içerisinde çalışır hale gelebilmesi için;
+Paketin `composer.json` dosyasındaki bağımlılıkları Laravel projenizin `composer.json` dosyasına ekleyerek. `composer update` komutunu çalıştırmalısınız.
+Sonrasında projenizin `autoload`, `PSR-4` bölümünü aşağıdaki gibi güncellemeniz yeterlidir.
+```json
+
+"psr-4": {
+    "App\\": "app/",
+    "Herkod\\Core\\": "vendor/herkod/herkod-core/src/"
+}
+```
 
 #### İletişim
 
