@@ -127,13 +127,13 @@ Bu proje e-ticaret çözümü olmasının yanında aslında gelişmiş bir CMS(�
 
 Bunun dışında Fatura, Kasa, Stok yönetimi ile ön muhasebe yazılımlarının işlevlerinide barındırmaktadır.
 
-Neden Laravel paketi olarak geliştiriliyor; Laravel'in php frameworkler arasındaki yerini açıklamaya sanıyorum lüzum yoktur. Google'da ufak bir araştırma ile Laravel hakkında bilgi edinebilirsiniz. Neden paket olarak geliştirildiğine gelecek olursak; Laravel geliştiriciler için esnek bir altyapı sağlamak, güncelleme kolaylığı, yeni çıkacak Laravel LTS sürümleri için paketin kolay upgrade edilebilmesi gibi nedenler sıralanabilir.
+Neden Laravel paketi olarak geliştiriliyor; Laravel'in php frameworkler arasındaki yerini açıklamaya sanıyoruz lüzum yoktur. Google'da ufak bir araştırma ile Laravel hakkında bilgi edinebilirsiniz. Neden paket olarak geliştirildiğine gelecek olursak; Laravel geliştiriciler için esnek bir altyapı sağlamak, güncelleme kolaylığı, yeni çıkacak Laravel LTS sürümleri için paketin kolay upgrade edilebilmesi gibi nedenler sıralanabilir.
 
 İlerleyen zamanlarda çekirdek paket yani şu anda içinde bulunduğumuz paket kullanılarak api hazırlanacaktır. Türkiye'de api tabanlı e-ticaret altyapısı sağlayan firma bulunmamaktadır. Bu açık böylece kapatılarak, mobil e-ticaret çözümleri, masaüstü e-ticaret çözümleri, web tabanlı e-ticaret çözümleri için bir platform ve kaynak olacaktır.
 
 Projede geliştirilme dili olarak Türkçe seçilmesinin temel nedeni, yabancı dil noktasında sıkıntı yaşayan Türk yazılımcıların tecrübelerini bizimle paylaşmaktan çekinmemelerini sağlamak ve Github gibi bir platforma alışmalarını kolaylaştırmaktır. Ayrıca Github üzerindeki Türk geliştirici sayısını arttırıp var olanları daha aktif hale getirebilme düşüncesi de Türkçe noktasında bizi etkilemiştir. Bu doğrultuda Github'ın kullanımı ile ilgili Türkçe dökümanlarda hazırlanacaktır. Ayrıca Laravel çatısı kullanılarak hazırlanmış, Türkçe olarak geliştirilmiş bir proje örneği kazandırmış olacağız.
 
-İsimlendirme neden Herkod-Core; Herkod, [Herkod Yazılım][herkod]'ın tescilli markasıdır. O yüzden isim aramak yerine şimdilik bu şekilde isimlendirilmiştir. İsmin değişmesi ile ilgili herhangi bir kısıtlama yoktur ve günü geldiğinde projenin geneli için isim değişikliği yapılabilir.
+İsimlendirme neden Herkod-Core; `Herkod`, [Herkod Yazılım][herkod]'ın tescilli markasıdır. O yüzden isim aramak yerine şimdilik bu şekilde isimlendirilmiştir. İsmin değişmesi ile ilgili herhangi bir kısıtlama yoktur ve günü geldiğinde projenin geneli için isim değişikliği yapılabilir.
 
 Ödeme sistemleri olarak öncelikle Payu ve Iyzico ile entegrasyon yapılacaktır.
 
