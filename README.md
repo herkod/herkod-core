@@ -60,6 +60,7 @@ Deposit::spending()->filter()
 Deposit::create()
 
 //Invoice
+Invoice::pdf()
 
 //Mailer
 
@@ -74,6 +75,8 @@ Order::create()
 Order::delete()
 Order::paymentOk()
 Order::paymentNo()
+Order::toInvoice()
+Order::deleteInvoice()
 
 //Page
 
@@ -108,16 +111,19 @@ Subscriber::filterBy()->sendEmail()
 Users::create()
 
 //Utils
+Utils::importData()
+Utils::exportData()
+Utils::backupDb()
 
 ```
 
 #### Genel Bilgilendirme
 
-Projenin öncelikli amacı Türkiye şartlarına uygun bir e-ticaret çözümü ortaya çıkarmaktır. Ancak projenin ilerleyen süreçte globalleşme ihtimali göz önünde bulundurularak veritabanı tasarlanırken ve fonksiyon isimledirmeleri oluşturulurken ingilizce dili kullanılacaktır. Php dökümantasyonu şu aşamada Türkçe olarak oluşturulacaktır.
+Projenin öncelikli amacı Türkiye şartlarına uygun bir e-ticaret çözümü ortaya çıkarmaktır. Ancak projenin ilerleyen süreçte globalleşme ihtimali göz önünde bulundurularak veri tabanı tasarlanırken ve fonksiyon isimlendirmeleri oluşturulurken İngilizce dili kullanılacaktır. Php dökümantasyonu şu aşamada Türkçe olarak oluşturulacaktır.
 
 Türkiye'den dünyaya satış yapmak isteyenler için para birimi, çoklu dil desteği, vergi çeşitleri göz önünde bulundurularak tasarım yapılmaktadır.
 
-Bu proje e-ticaret çözümü olmasının yanında aslında gelişmiş bir CMS(İçerik Yönetim Sistemi) olarakda düşünülebilir. Medya(Ortam), Blog Yazıları, Sayfalar başlıca CMS modülleridir. Veritabanı tasarımında Wordpress'in esnekliğinden esinlenilmiştir.
+Bu proje e-ticaret çözümü olmasının yanında aslında gelişmiş bir CMS(İçerik Yönetim Sistemi) olarak da düşünülebilir. Medya(Ortam), Blog Yazıları, Sayfalar başlıca CMS modülleridir. Veri tabanı tasarımında Wordpress'in esnekliğinden esinlenilmiştir.
 
 Bunun dışında Fatura, Kasa, Stok yönetimi ile ön muhasebe yazılımlarının işlevlerinide barındırmaktadır.
 
@@ -125,7 +131,7 @@ Neden Laravel paketi olarak geliştiriliyor; Laravel'in php frameworkler arasın
 
 İlerleyen zamanlarda çekirdek paket yani şu anda içinde bulunduğumuz paket kullanılarak api hazırlanacaktır. Türkiye'de api tabanlı e-ticaret altyapısı sağlayan firma bulunmamaktadır. Bu açık böylece kapatılarak, mobil e-ticaret çözümleri, masaüstü e-ticaret çözümleri, web tabanlı e-ticaret çözümleri için bir platform ve kaynak olacaktır.
 
-Projede geliştirilme dili olarak Türkçe seçilmesinin temel nedeni, yabancı dil noktasında sıkıntı yaşayan Türk yazılımcıların tecrübelerini bizimle paylaşmaktan çekinmemelerini sağlamak ve Github gibi bir platforma alışmalarını kolaylaştırmaktır. Ayrıca Github üzerindeki Türk geliştirici sayısını arttırıp varolanları daha aktif hale getirebilme düşünceside Türkçe noktasında bizi etkilemiştir. Bu doğrultuda Github'ın kullanımı ile ilgili Türkçe dökümanlarda hazırlanacaktır. Ayrıca Laravel çatısı kullanılarak hazırlanmış, Türkçe olarak geliştirilmiş bir proje örneği kazandırmış olacağız.
+Projede geliştirilme dili olarak Türkçe seçilmesinin temel nedeni, yabancı dil noktasında sıkıntı yaşayan Türk yazılımcıların tecrübelerini bizimle paylaşmaktan çekinmemelerini sağlamak ve Github gibi bir platforma alışmalarını kolaylaştırmaktır. Ayrıca Github üzerindeki Türk geliştirici sayısını arttırıp var olanları daha aktif hale getirebilme düşüncesi de Türkçe noktasında bizi etkilemiştir. Bu doğrultuda Github'ın kullanımı ile ilgili Türkçe dökümanlarda hazırlanacaktır. Ayrıca Laravel çatısı kullanılarak hazırlanmış, Türkçe olarak geliştirilmiş bir proje örneği kazandırmış olacağız.
 
 İsimlendirme neden Herkod-Core; Herkod, [Herkod Yazılım][herkod]'ın tescilli markasıdır. O yüzden isim aramak yerine şimdilik bu şekilde isimlendirilmiştir. İsmin değişmesi ile ilgili herhangi bir kısıtlama yoktur ve günü geldiğinde projenin geneli için isim değişikliği yapılabilir.
 
@@ -157,12 +163,15 @@ Bağımlılıklar proje tam anlamıyla pakete dönüştürülene kadar Laravel p
 - intervention/image
 
 #### Projeye Nasıl Katkı Sağlayabilirsiniz
-Öncelikle projeden fork ile çatal oluşturmalısınız. Sonrasında oluşturduğunuz çataldan projeyi klonlamalı yada manuel olarak indirmelisiniz.
-Forkunuzdan Projeyi `vendor/herkod/herkod-core` klasörüne klonlamalı yada manuel olarak indirerek bu klasöre çıkartmalısınız.
+Öncelikle projeden fork ile çatal oluşturmalısınız. Sonrasında oluşturduğunuz çataldan projeyi klonlamalı ya da manuel olarak indirmelisiniz.
+Forkunuzdan Projeyi `vendor/herkod/herkod-core` klasörüne klonlamalı ya da manuel olarak indirerek bu klasöre çıkartmalısınız.
 Sonrasında yapmak istediğiniz güncellemeleri yaparak sırasıyla;
-'git add .'
-'git commit -m "Projede xxx değişikliği yapıldı."'
-'git push origin master'
+```bash
+
+git add .
+git commit -m "Projede xxx değişikliği yapıldı."
+git push origin master
+```
 komutlarını çalıştırıyoruz. Bu komutlar sonrasında projeden oluşturduğunuz çatala göz atabilirsiniz. Yaptığınız commitler görünecektir. Bu işlemlerden sonra `Create Pull Request` göndererek işlemi tamamlayabilirsiniz. Katkılarınız en kısa sürede incelenecek ve dönüş yapılacaktır.
 
 İndirdiğiniz paketin laravel içerisinde çalışır hale gelebilmesi için;
