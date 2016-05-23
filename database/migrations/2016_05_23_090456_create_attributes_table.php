@@ -21,8 +21,8 @@ class CreateAttributesTable extends Migration
             $table->integer('rgt')->nullable();
             $table->integer('depth')->nullable();
 
-            $table->unsignedInteger('posts_id');
-            $table->foreign('posts_id')->references('id')->on('posts');
+            $table->string('parent_table');
+            $table->unsignedInteger('parent_id');
 
             $table->string('key');
             $table->text('value');
@@ -33,7 +33,7 @@ class CreateAttributesTable extends Migration
             $table->unsignedInteger('updated_by_id')->nullable()->index();
             $table->timestamps();
 
-            $table->index(['posts_id', 'key']);
+            $table->index(['parent_table', 'parent_id', 'key']);
         });
     }
 
