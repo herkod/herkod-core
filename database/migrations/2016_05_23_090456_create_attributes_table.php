@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCategoriesTable extends Migration
+class CreateAttributesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('attributes', function (Blueprint $table) {
             $table->increments('id');
 
             //Baum
@@ -21,16 +21,19 @@ class CreateCategoriesTable extends Migration
             $table->integer('rgt')->nullable();
             $table->integer('depth')->nullable();
 
-            $table->string('name', 255);
-            $table->string('slug', 255);
-            $table->string('description', 255);
-            $table->string('image_url', 255);
+            $table->unsignedInteger('posts_id');
+            $table->foreign('posts_id')->references('id')->on('posts');
+
+            $table->string('key');
+            $table->text('value');
 
             $table->string('created_by');
             $table->string('updated_by');
             $table->unsignedInteger('created_by_id')->nullable()->index();
             $table->unsignedInteger('updated_by_id')->nullable()->index();
             $table->timestamps();
+
+            $table->index(['posts_id', 'key']);
         });
     }
 
@@ -41,6 +44,6 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('categories');
+        Schema::drop('attributes');
     }
 }
