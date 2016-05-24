@@ -170,15 +170,13 @@ Projede geliştirilme dili olarak Türkçe seçilmesinin temel nedeni, yabancı 
 
 #### Yazılım Geliştirme Tercihleri
 
-Yazılan kodun mümkün olduğunca test edilebilir olması birincil hedeflerimizdendir.
-
-Pakette bir modülü geliştirmeden önce testlerini yazarak daha sonra paketi geliştirmeye başlamayı hedefliyoruz. Yani öncelikli amaç testlerin yazılmasıdır. Projeye katkı sağlamak isteyenlerden de öncelikle geliştirmek istedikleri modül için veya düzelmek istedikleri hata için yazılabiliyorsa testini bekleyeceğiz.
+Yazılan kodun mümkün olduğunca test edilebilir olması birincil hedeflerimizdendir. Pakette bir modülü geliştirmeden önce testlerini yazarak daha sonra paketi geliştirmeye başlamayı hedefliyoruz. Yani öncelikli amaç testlerin yazılmasıdır. Projeye katkı sağlamak isteyenlerden de öncelikle geliştirmek istedikleri modül için veya düzelmek istedikleri hata için yazılabiliyorsa testini bekleyeceğiz. Yani bu projede Test Driven Development(Test Odaklı|Güdümlü Programlama) felsefesini uygulamak hedeflenmektedir.
 
 Core paketinin klasör yapısını inceleyerek nasıl bir klasör yapısı tercih ettiğimizi direk anlayabilirsiniz.
 
 Bu paket şu anda Laravel'in LTS sürümü olan 5.1.* versiyonu için geliştirilmektedir. Bir sonraki LTS versiyonu yayınlandığında o versiyona upgrade edilecektir.
 
-Php standartları açısından PSR standartları göz önünde bulundurulmaktadır. Standartlara uygunluk için [php-cs-fixer][php-cs-fixer] kullanılmaktadır.
+Php standartları açısından PSR standartları(PSR-1, PSR-2, PSR-4) göz önünde bulundurulmaktadır. Standartlara uygunluk için [php-cs-fixer][php-cs-fixer] kullanılmaktadır.
 
 Çoğu e-ticaret çözümünde olduğu gibi, gerçekleştirilen işlemlerde gerekli görülenler için hooks|events geliştirilerek geliştirilebilir bir yapı hedeflenmektedir.
 
@@ -186,9 +184,8 @@ Tam anlamıyla kararlı sürümü yayınlanmadan Packagist üzerinden composer i
 
 Bağımlılıklar proje tam anlamıyla pakete dönüştürülene kadar Laravel projenizin composer.json dosyası ile yönetilecektir. Alternatif bir yol için tavsiyelerinize açığız.
 
-
 #### Projeyeyi Nasıl Çalıştırabilirsiniz?
-İndirdiğiniz paketin laravel içerisinde çalışır hale gelebilmesi için;
+Öncelikle projeyi klonlamalı ya da manuel olarak indirmelisiniz. Nasıl indirebileceğinizi öğrenmek için **"Projeye Nasıl Katkı Sağlayabilirsiniz?"** bölümünü inceleyebilirsiniz. İndirdiğiniz paketin laravel içerisinde çalışır hale gelebilmesi için;
 - Paketin `composer.json` dosyasındaki bağımlılıkları(Bağımlılığı öngörülen paketler) Laravel projenizin `composer.json` dosyasına ekleyerek. `composer update` komutunu çalıştırmalısınız.
 
     **Bağımlılığı öngörülen paketler;**
@@ -224,6 +221,10 @@ git commit -m "Projede xxx değişikliği yapıldı."
 git push origin master
 ```
 komutlarını çalıştırıyoruz. Bu komutlar sonrasında projeden oluşturduğunuz çatala göz atabilirsiniz. Yaptığınız commitler görünecektir. Bu işlemlerden sonra `Create Pull Request` göndererek işlemi tamamlayabilirsiniz. Katkılarınız en kısa sürede incelenecek ve dönüş yapılacaktır.
+
+#### Test nedir? Niçin Yazılır? Nasıl Yazılır?
+
+Hazırlanıyor...
 
 #### İletişim
 
