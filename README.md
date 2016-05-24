@@ -186,15 +186,35 @@ Tam anlamıyla kararlı sürümü yayınlanmadan Packagist üzerinden composer i
 
 Bağımlılıklar proje tam anlamıyla pakete dönüştürülene kadar Laravel projenizin composer.json dosyası ile yönetilecektir. Alternatif bir yol için tavsiyelerinize açığız.
 
-**Bağımlılığı öngörülen paketler;**
-- barryvdh/laravel-debugbar
-- etrepat/baum
-- briannesbitt/Carbon
-- jenssegers/date
-- intervention/image
 
-#### Projeye Nasıl Katkı Sağlayabilirsiniz
-Öncelikle projeden fork ile çatal oluşturmalısınız. Sonrasında oluşturduğunuz çataldan projeyi klonlamalı ya da manuel olarak indirmelisiniz.
+#### Projeyeyi Nasıl Çalıştırabilirsiniz?
+İndirdiğiniz paketin laravel içerisinde çalışır hale gelebilmesi için;
+- Paketin `composer.json` dosyasındaki bağımlılıkları(Bağımlılığı öngörülen paketler) Laravel projenizin `composer.json` dosyasına ekleyerek. `composer update` komutunu çalıştırmalısınız.
+
+    **Bağımlılığı öngörülen paketler;**
+    - barryvdh/laravel-debugbar
+    - etrepat/baum
+    - briannesbitt/Carbon
+    - jenssegers/date
+    - intervention/image
+
+- Projenizin Config/app.php dosyasında providers bölümüne aşağıdaki satırı yapıştırınız.
+```php
+    Herkod\Core\HerkodCoreServiceProvider::class,
+```
+
+- Sonrasında projenizin `autoload`, `PSR-4` bölümünü aşağıdaki gibi güncellemeniz yeterlidir.
+```json
+
+"psr-4": {
+    "App\\": "app/",
+    "Herkod\\Core\\": "vendor/herkod/herkod-core/src/"
+}
+```
+
+#### Projeye Nasıl Katkı Sağlayabilirsiniz?
+
+Projeye katkı sağlamak için öncelikle projeden fork ile çatal oluşturmalısınız. Sonrasında oluşturduğunuz çataldan projeyi klonlamalı ya da manuel olarak indirmelisiniz.
 Forkunuzdan Projeyi `vendor/herkod/herkod-core` klasörüne klonlamalı ya da manuel olarak indirerek bu klasöre çıkartmalısınız.
 Sonrasında yapmak istediğiniz güncellemeleri yaparak sırasıyla;
 ```bash
@@ -204,17 +224,6 @@ git commit -m "Projede xxx değişikliği yapıldı."
 git push origin master
 ```
 komutlarını çalıştırıyoruz. Bu komutlar sonrasında projeden oluşturduğunuz çatala göz atabilirsiniz. Yaptığınız commitler görünecektir. Bu işlemlerden sonra `Create Pull Request` göndererek işlemi tamamlayabilirsiniz. Katkılarınız en kısa sürede incelenecek ve dönüş yapılacaktır.
-
-İndirdiğiniz paketin laravel içerisinde çalışır hale gelebilmesi için;
-Paketin `composer.json` dosyasındaki bağımlılıkları Laravel projenizin `composer.json` dosyasına ekleyerek. `composer update` komutunu çalıştırmalısınız.
-Sonrasında projenizin `autoload`, `PSR-4` bölümünü aşağıdaki gibi güncellemeniz yeterlidir.
-```json
-
-"psr-4": {
-    "App\\": "app/",
-    "Herkod\\Core\\": "vendor/herkod/herkod-core/src/"
-}
-```
 
 #### İletişim
 
