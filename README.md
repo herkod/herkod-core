@@ -30,6 +30,8 @@ Category::moveDown()
 Category::isChild()
 Category::isRoot()
 Category::getItem()
+Category::productsPriceUpPercent()
+Category::productsPriceDownPercent()
 
 //Comment
 Comment::get()
@@ -61,6 +63,8 @@ Deposit::create()
 
 //Invoice
 Invoice::pdf()
+Invoice::renderViewAsPDF()
+Invoice::renderViewAsHtml()
 
 //Mailer
 
@@ -104,6 +108,8 @@ Product::variations()
 //Promotion
 Promotion::create()
 Promotion::createForFreeShipping()
+Promotion::buyTwoGetOneFree()
+Promotion::buyThreeGetOneFree()
 
 //Shipping
 Shipping::create()
