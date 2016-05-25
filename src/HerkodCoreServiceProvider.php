@@ -53,7 +53,30 @@ class HerkodCoreServiceProvider extends ServiceProvider
         |
         */
         $this->registerModules([
-            'Mail',
+            'Blog',
+            'Cart',
+            'Category',
+            'Comment',
+            'Currency',
+            'Deposit',
+            'Invoice',
+            'Mailer',
+            'Media',
+            'Menu',
+            'Order',
+            'Page',
+            'Parameter',
+            'Payment',
+            'Post',
+            'Product',
+            'Promotion',
+            'Shipping',
+            'Stock',
+            'Subscriber',
+            'Tag',
+            'Tax',
+            'Users',
+            'Utils',
         ]);
     }
 
