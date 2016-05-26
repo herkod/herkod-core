@@ -125,6 +125,8 @@ class HerkodCoreServiceProvider extends ServiceProvider
         $loader->alias('Payment', Payment\Facade\PaymentFacade::class);
         $loader->alias('Post', Post\Facade\PostFacade::class);
         $loader->alias('Product', Product\Facade\ProductFacade::class);
+        $loader->alias('Specification', Product\Facade\SpecificationFacade::class);
+        $loader->alias('Variation', Product\Facade\VariationFacade::class);
         $loader->alias('Promotion', Promotion\Facade\PromotionFacade::class);
         $loader->alias('Shipping', Shipping\Facade\ShippingFacade::class);
         $loader->alias('Stock', Stock\Facade\StockFacade::class);
@@ -133,6 +135,7 @@ class HerkodCoreServiceProvider extends ServiceProvider
         $loader->alias('Tax', Tax\Facade\TaxFacade::class);
         $loader->alias('Users', Users\Facade\UsersFacade::class);
         $loader->alias('Utils', Utils\Facade\UtilsFacade::class);
+        $loader->alias('Backup', Utils\Facade\BackupFacade::class);
 
         /*
         |--------------------------------------------------------------------------

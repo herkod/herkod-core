@@ -25,6 +25,8 @@ class FacadesTest extends TestCase
             'Payment',
             'Post',
             'Product',
+            'Specification',
+            'Variation',
             'Promotion',
             'Shipping',
             'Stock',
@@ -33,6 +35,7 @@ class FacadesTest extends TestCase
             'Tax',
             'Users',
             'Utils',
+            'Backup',
         ];
     }
 
@@ -43,7 +46,7 @@ class FacadesTest extends TestCase
             $this->assertTrue(class_exists($facade), $facade.' için facadeyi kontrol etmelisin. Facade Register edilememiş olmalı.');
 
             //Facade'nin gösterdiği class var mı?
-            $this->assertTrue(class_exists('\\Herkod\\Core\\'.$facade.'\\'.$facade), '\\Herkod\\Core\\'.$facade.'\\'.$facade.' classını kontrol etmelisin.');
+            $this->assertTrue(class_exists($facade::getFacadeAccessorClass()), $facade::getFacadeAccessorClass().' classını kontrol etmelisin.');
         }
     }
 }

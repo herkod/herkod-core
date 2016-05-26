@@ -1,10 +1,10 @@
 <?php
 
-namespace Herkod\Core\Payment\Facade;
+namespace Herkod\Core\Utils\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
-class PaymentFacade extends Facade
+class BackupFacade extends Facade
 {
     use \Herkod\Core\Utils\Traits\FacadeAccessorClass;
 
@@ -15,6 +15,6 @@ class PaymentFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return '\Herkod\Core\Payment\Payment';
+        return '\Herkod\Core\Utils\Backup';
     }
 }

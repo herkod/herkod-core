@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Facade;
 
 class TagFacade extends Facade
 {
+    use \Herkod\Core\Utils\Traits\FacadeAccessorClass;
+
     /**
      * Get the registered name of the component.
      *

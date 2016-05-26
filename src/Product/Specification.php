@@ -1,6 +1,6 @@
 <?php
 
-namespace Herkod\Core\Specification;
+namespace Herkod\Core\Product;
 
 class Specification
 {
