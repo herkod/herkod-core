@@ -12,13 +12,16 @@ Laravel paketi halinde, Türkiye şartları için hazırlanmış bir e-ticaret �
 ```php
 
 //Cart
-Cart::addToCart()
-Cart::delete()
-Cart::contentsCount()
-Cart::contentsWeight()
+Cart::addItem()
+Cart::deleteItem()
 Cart::isEmpty()
-Cart::products()
-Cart::productAttribute()
+Cart::getAllItems()
+Cart::getSubtotal()
+Cart::getGrandTotal()
+Cart::getItemsWeight()
+Cart::getItemsCount()
+Cart::getItemsQty()
+
 
 //Category
 Category::roots()
@@ -53,13 +56,15 @@ Currency::calculate()
 
 //Data
 Data::type('page')->filter('id', 1)
-Data::type('product')->filter('category', 'computer')
+Data::type('menu')->filter('name', 'test_menu')->get()
+Data::type('attachment')->find(1)
 
 //Deposit
-Deposit::all()
-Deposit::tolal()
-Deposit::spending()->filter()
-Deposit::create()
+Deposit::getAllMovements()
+Deposit::getGrandTotal()
+Deposit::getSpendings()
+Deposit::getRevenues()
+Deposit::createMovement()
 
 //Invoice
 Invoice::pdf()
@@ -116,9 +121,10 @@ Shipping::create()
 Shipping::listAsOption()
 
 //Stock
-Stock::depleted()
-Deposit::inStock()
-Deposit::all()
+Stock::getIdBySku()
+Stock::getDepletedItems()
+Stock::getInStockItems()
+Stock::getAllItems()
 
 //Subscriber
 Subscriber::filterBy()->sendEmail()
