@@ -35,7 +35,7 @@ class CreatePostsTable extends Migration
             ])->index();
 
             $table->unsignedInteger('order')->default(0)->index();
-            //attachment, page, post, product, menu, revision
+            //attachment, page, post, menu, revision
             $table->string('type', 20);
             $table->string('mime_type', 100);
             $table->unsignedInteger('parent_id')->nullable()->index();
