@@ -11,6 +11,12 @@ Laravel paketi halinde, Türkiye şartları için hazırlanmış bir e-ticaret �
 
 ```php
 
+//Backup
+Backup::dbExport()
+Backup::dbImport()
+Backup::attachmentSync()
+Backup::all()
+
 //Cart
 Cart::addItem()
 Cart::deleteItem()
@@ -21,7 +27,6 @@ Cart::getGrandTotal()
 Cart::getItemsWeight()
 Cart::getItemsCount()
 Cart::getItemsQty()
-
 
 //Category
 Category::roots()
@@ -54,11 +59,6 @@ Currency::get()
 Currency::all()
 Currency::calculate()
 
-//Data
-Data::type('page')->filter('id', 1)
-Data::type('menu')->filter('name', 'test_menu')->get()
-Data::type('attachment')->find(1)
-
 //Deposit
 Deposit::getAllMovements()
 Deposit::getGrandTotal()
@@ -72,10 +72,15 @@ Invoice::renderViewAsPDF()
 Invoice::renderViewAsHtml()
 
 //Mailer
+Mailer::sendWithUserId()
 
 //Media
+Media::getUrl()
+Media::toBase64()
 
 //Menu
+Menu::getMenuWithId()
+Menu::getMenuWithName()
 
 //Order
 Order::all()
@@ -88,16 +93,26 @@ Order::toInvoice()
 Order::deleteInvoice()
 
 //Page
+Page::get()
+
 
 //Parameter
+Parameter::get()
+Parameter::forget()
+Parameter::push()
+
 
 //Payment
 Payment::methods()
+Payment::checkStatus()
+Payment::cancel()
 
 //Post
 Post::create()
 Post::update()
-Post::type()
+Post::type('page')->filter('id', 1)
+Post::type('menu')->filter('name', 'test_menu')->get()
+Post::type('attachment')->find(1)
 
 //Product
 Product::create()
@@ -146,12 +161,13 @@ Users::login()
 Users::setRole()
 Users::getRoles()
 Users::suspend()
+Users::sendMail()
+Users::sendSMS()
+
 
 //Utils
 Utils::dbToExcel()
 Utils::excelToDb()
-Utils::backupDbExport()
-Utils::backupDbImport()
 ```
 
 #### Genel Bilgilendirme
@@ -236,6 +252,7 @@ Hazırlanıyor...
 
 Bizimle iletişime geçmek için **github@herkod.com** mail adresine mail atabilirsiniz. Pakette acil düzeltilmesi gereken yerler olduğunda mail adresimizden bize ulaşırsanız hatalar ivedilikle çözülecektir. Sormak istediğiniz sorular için, tavsiyeleriniz içinde bizlere mail atmaktan lütfen çekinmeyin.
 
+[![Herkod Yazılım](https://www.herkod.com/herkod/front/img/logo-dark.png)](https://www.herkod.com)
 
 
 [php-cs-fixer]:http://cs.sensiolabs.org/
