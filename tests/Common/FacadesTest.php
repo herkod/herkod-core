@@ -34,6 +34,7 @@ class FacadesTest extends TestCase
             'Tag',
             'Tax',
             'Users',
+
             'Utils',
             'Backup',
         ];
