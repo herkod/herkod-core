@@ -5,7 +5,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 //Testi çalıştırmak için vendor/herkod/herkod-core klasöründe ../../bin/phpunit komutunu kullanıyoruz.
 
-class UserTest extends TestCase
+class UserTest1 extends TestCase
 {
     // public function testKullaniciOlustur()
     // {

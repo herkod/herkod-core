@@ -14,8 +14,10 @@ Laravel paketi halinde, Türkiye şartları için hazırlanmış bir e-ticaret �
 //Backup
 Backup::dbExport()
 Backup::dbImport()
-Backup::attachmentSync()
 Backup::all()
+Backup::media()
+Backup::sync()
+
 
 //Cart
 Cart::addItem()
@@ -27,8 +29,11 @@ Cart::getGrandTotal()
 Cart::getItemsWeight()
 Cart::getItemsCount()
 Cart::getItemsQty()
+Cart::getTotalTax()
+Cart::getTaxs()
 
 //Category
+Category::get(@id)
 Category::roots()
 Category::addRoot()
 Category::addChild()
@@ -37,7 +42,6 @@ Category::moveUp()
 Category::moveDown()
 Category::isChild()
 Category::isRoot()
-Category::getItem()
 Category::productsPriceUpPercent()
 Category::productsPriceDownPercent()
 
@@ -45,11 +49,10 @@ Category::productsPriceDownPercent()
 Comment::get()
 Comment::create()
 Comment::update()
-Comment::apply()
+Comment::apply(true|false)
 Comment::delete()
-Comment::all()
-Comment::postComments()
-Comment::gravatar()
+Comment::all(@parent_id)
+Comment::getGravatar(@user_id)
 
 //Currency
 Currency::create()
@@ -58,6 +61,8 @@ Currency::update()
 Currency::get()
 Currency::all()
 Currency::calculate()
+Currency::sync(@currency_id)
+Currency::syncAll()
 
 //Deposit
 Deposit::getAllMovements()
@@ -65,22 +70,37 @@ Deposit::getGrandTotal()
 Deposit::getSpendings()
 Deposit::getRevenues()
 Deposit::createMovement()
+Deposit::updateMovement()
+Deposit::deleteMovement()
 
 //Invoice
-Invoice::pdf()
+Invoice::data()
+Invoice::renderWithTemplate()
 Invoice::renderViewAsPDF()
 Invoice::renderViewAsHtml()
 
 //Mailer
+Mailer::send(@users)
 Mailer::sendWithUserId()
+Mailer::sendAll()
 
 //Media
-Media::getUrl()
+Media::get(@media_id|@parent_id)
+Media::geturl(@media_id)
+Media::getDataurl()
 Media::toBase64()
 
 //Menu
-Menu::getMenuWithId()
-Menu::getMenuWithName()
+Menu::get(@menu_id|@menu_name)
+Menu::roots()
+Menu::addRoot()
+Menu::addChild()
+Menu::makeChildOf()
+Menu::moveUp()
+Menu::moveDown()
+Menu::isChild()
+Menu::isRoot()
+Menu::getItem()
 
 //Order
 Order::all()
@@ -93,13 +113,22 @@ Order::toInvoice()
 Order::deleteInvoice()
 
 //Page
-Page::get()
+Page::get(@page_id)
+Page::create()
+Page::update()
+Page::delete()
+Page::all()->filterBy()
+Page::pagination()
+Page::comments()
 
 
 //Parameter
 Parameter::get()
-Parameter::forget()
-Parameter::push()
+Parameter::getFromCache()
+Parameter::all()->filterBy()
+Parameter::create()
+Parameter::update()
+Parameter::delete()
 
 
 //Payment
@@ -110,13 +139,16 @@ Payment::cancel()
 //Post
 Post::create()
 Post::update()
+Post::delete()
 Post::type('page')->filter('id', 1)
 Post::type('menu')->filter('name', 'test_menu')->get()
 Post::type('attachment')->find(1)
 
 //Product
 Product::create()
-Product::list()->filterBy()
+Product::update()
+Product::delete()
+Product::all()->filterBy()
 Product::getAttribute()
 Product::setAttribute()
 Product::allAttributes()
@@ -124,22 +156,30 @@ Product::allSpecifications()
 Product::getSpecification()
 Product::setSpecification()
 Product::variations()
+Product::compare([@products_ids])
 
 //Promotion
 Promotion::create()
 Promotion::createForFreeShipping()
 Promotion::buyTwoGetOneFree()
 Promotion::buyThreeGetOneFree()
+Promotion::createCustom()
 
 //Shipping
 Shipping::create()
-Shipping::listAsOption()
+Shipping::update()
+Shipping::delete()
+Shipping::getAsOption()
 
 //Stock
 Stock::getIdBySku()
-Stock::getDepletedItems()
-Stock::getInStockItems()
-Stock::getAllItems()
+Stock::getDepleteds()
+Stock::getCritics()
+Stock::getHavings()
+Stock::getAll()->filterBy()
+Stock::createMovement()
+Stock::updateMovement()
+Stock::deleteMovement()
 
 //Subscriber
 Subscriber::filterBy()->sendEmail()
@@ -168,6 +208,8 @@ Users::sendSMS()
 //Utils
 Utils::dbToExcel()
 Utils::excelToDb()
+Utils::cropImage()
+Utils::imageToThumnail()
 ```
 
 #### Genel Bilgilendirme

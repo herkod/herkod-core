@@ -18,7 +18,7 @@ class HerkodCoreServiceProvider extends ServiceProvider
         | php artisan vendor:publish --provider="Herkod\Core\HerkodCoreServiceProvider" --tag="migration"
         |
         */
-        $this->publishes([__DIR__.'/../database/migrations/' => database_path('/migrations')], 'migration');
+        $this->publishes([__DIR__.'/../database/migrations/' => database_path('/migrations')], 'herkod-core-migration');
 
         /*
         |--------------------------------------------------------------------------
@@ -29,7 +29,7 @@ class HerkodCoreServiceProvider extends ServiceProvider
         | php artisan vendor:publish --provider="Herkod\Core\HerkodCoreServiceProvider" --tag="seed"
         |
         */
-        $this->publishes([__DIR__.'/../database/seeds/' => database_path('/seeds')], 'seed');
+        $this->publishes([__DIR__.'/../database/seeds/' => database_path('/seeds')], 'herkod-core-seed');
 
         /*
         |--------------------------------------------------------------------------
@@ -40,7 +40,7 @@ class HerkodCoreServiceProvider extends ServiceProvider
         | php artisan vendor:publish --provider="Herkod\Core\HerkodCoreServiceProvider" --tag="config"
         |
         */
-        $this->publishes([__DIR__.'/../config' => config_path('/herkod')], 'config');
+        $this->publishes([__DIR__.'/../config' => config_path('/herkod')], 'herkod-core-config');
 
         /*
         |--------------------------------------------------------------------------
