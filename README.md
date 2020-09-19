@@ -293,9 +293,8 @@ Hazırlanıyor...
 #### İletişim
 
 Bizimle iletişime geçmek için **github@herkod.com** mail adresine mail atabilirsiniz. Pakette acil düzeltilmesi gereken yerler olduğunda mail adresimizden bize ulaşırsanız hatalar ivedilikle çözülecektir. Sormak istediğiniz sorular için, tavsiyeleriniz içinde bizlere mail atmaktan lütfen çekinmeyin.
-
-[![Herkod Yazılım](https://www.herkod.com/herkod/front/img/logo-dark.png)](https://www.herkod.com)
-
-
-[php-cs-fixer]:http://cs.sensiolabs.org/
-[herkod]:https://www.herkod.com/
+<br>
+<br>
+<p align="center">
+  <a href="https://www.herkod.com"><img src="https://herkod.com/images/logo/logo.svg" width="250"></a>
+</p>
